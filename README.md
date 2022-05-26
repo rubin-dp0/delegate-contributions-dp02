@@ -1,7 +1,7 @@
 # delegate-contributions-dp02
 This repository is for DP0 delegates to contribute and share DP0.2-related materials (e.g., code, analysis tools, tutorials).
 
-Tutorials could be Jupyter Notebooks, or markdown-formatted demonstrations of a DP0.1-related analysis with command-line tasks or the Portal Aspect.
+Tutorials could be Jupyter Notebooks, or markdown-formatted demonstrations of a DP0-related analysis with command-line tasks or the Portal Aspect.
 
 Please contribute only code that you have verified to run.
 
@@ -32,7 +32,7 @@ Any delegate who is unsure about how to request a review for a PR, or needs a re
 
 All materials should be organized into directories.
 An ``example`` directory is provided as an illustration.
-Anyone may make a directory for a specific science topic, a specific tool or type of analysis, by DP0.1 working group, etc.
+Anyone may make a directory for a specific science topic, a specific tool or type of analysis, etc.
 Directory creators should create a README.md file within the directory that identifies them as the directory maintainer and describes the contents of the directory.
 Contact the directory creator if you want to contribute content to their directory.
 Direct messages between delegates in Community.lsst.org is an appropriate mode of contact.
