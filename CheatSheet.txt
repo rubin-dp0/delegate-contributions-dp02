@@ -1,0 +1,168 @@
+# This is a cheat sheet of GitHub commands for DP0 delegates using this repository.
+# This cheat sheet was initially prepared by Doug Tucker for the Stack Cub members.  
+# The following will be most useful to people who are new to git and command lines.
+
+# Below, "your_name" = your GitHub username.
+# "This repository" is "delegate-contributions-dp02".
+# "This GitHub Org" is "rubin-dp0".
+
+-----------------------------------------------------------
+# Get started - make a local copy of this repo in your home directory.
+# In the Notebook Aspect of the Rubin Science Platform (JupyterLab), launch a terminal.
+
+# First, check your present working directory:
+pwd
+
+# This should return /home/your_name
+
+# Now list the contents of your present working directory:
+ls
+
+# You will see that you have a notebooks directory. Go into it:
+cd notebooks
+
+# You will see that two directories already exist: system_test and tutorial-notebooks
+# The tutorial-notebooks directory will match the repository with the same name in this GitHub Org.
+
+# Clone this repository, delegate-contributions-dp02, into your notebooks directory:
+git clone https://github.com/rubin-dp0/delegate-contributions-dp02.git
+
+# Now go into it:
+cd delegate-contributions-dp02
+
+# List the contents:
+ls
+
+# This list will match what you see in https://github.com/rubin-dp0/delegate-contributions-dp02
+# Including this CheatSheet.txt file.
+
+# Here are some useful "git" commands:
+git status       # returns current branch, changed files; use this frequently
+git branch -a    # list all branches of this repo
+git remote -v    # list the remotes for this repo
+
+-----------------------------------------------------------
+# Prepare to work - make yourself a branch and switch to it
+
+# By default, right after a "git clone", you will be in the "main" branch.
+
+# Create a new branch to use for your own work, and switch to that branch in one command.
+# By convention, we name user branches "u/your_name":
+git checkout -b u/your_name
+
+# Confirm that you are working in your new branch
+git branch
+git status
+
+# Alternatively, you could create a new branch *without* switching to it:
+git branch u/your_name
+
+# To switch to any existing branch at any time:
+git checkout u/your_name
+
+-----------------------------------------------------------
+# Work in your branch - edit files and notebooks or create new ones
+ 
+# If editing/creating a notebook:
+#  1. make your changes until you are 'done'
+#  2. from menu bar select Kernel --> Restart and Run All Cells
+#  3. fix errors until the whole notebook executes
+#  4. from menu bar select Kernel --> Restart and Clear All Cells
+#  5. from menu bar select File --> Save Notebook 
+
+# The final save should be a cleared notebook with no executed cells.
+
+-----------------------------------------------------------
+# Commit changes to your local branch
+# This can be done periodically as you work
+
+# Check which files have been changed
+git status
+
+# All of the changed files must be added in order to commit
+# Add files one at a time
+git add <filename>
+
+# Check that all changed files have been added
+git status
+
+# Commit your changes to the local branch
+git commit -m "Leave a short comment within quotes"
+
+-----------------------------------------------------------
+# Push your commits to your branch of the remote repository
+# This can be done periodically, or only when you're "finished"
+
+git push origin u/your_name
+
+# You might be asked for your password at this point.
+# You can avoid having to do this all the time by setting up your git credentials.
+# See the bottom part of the README.md file for this GitHub Org for instructions.
+
+# After this, your changes will appear in your branch at https://github.com/rubin-dp0.
+
+-----------------------------------------------------------
+# Pull Requests -- merge your branch into main to share your work with everyone
+
+# Start here: https://github.com/rubin-dp0/delegate-contributions-dp02/pulls
+# Click on green "New pull request" button.
+# Choose "main" and then "u/your_name".
+# The arrow should point FROM "u/your-name" TO "main".
+
+# If the branch is able to be merged to main, you be able to select "Create pull request".
+# Name your pull request (your PR) and leave a few comments describing the changes in your branch.
+# Your PR will be given a number.
+
+# On your PR's page, at the top of the left-hand side bar, click on "Reviewers".
+# Assign another delegate to review your proposed changes to "main".
+# It is convention that all shared code should be reviewed.
+# Address any comments or concerns that your reviewer has with additional commits to your branch.
+
+# So long as you see a green checkmark and your code is reviewed, you're OK to merge.
+# It's preferable to choose "rebase and merge", but "merge pull request" is ok too.
+
+# Immediately after merging, you will see:
+#  "Pull request successfully merged and closed"
+# And you are offered an opportunity to delete the branch.
+# If you anticipate using your branch again in the near future, keep it.
+# Otherwise, delete the branch.
+
+-----------------------------------------------------------
+# Alternative commands for merging and deleting branches
+
+# First, delete the local version of branch u/your_name
+git branch -d u/your_name
+
+# Then push that deletion to the remote verison of the branch
+git push origin --delete u/your_name
+
+# You can do much of the above using this step-by-step command-line version:
+git checkout main                     # Switch from u/your_name back to master branch (locally)
+git pull origin main                  # Make sure local master branch is up-to-date with remote origin master branch on github
+git branch --merged                   # Check to see if u/your_name has been merged locally
+git merge u/your_name                 # Merge u/your_name with local master branch
+git branch --merged                   # Verify the merge worked
+git push origin main                  # Push local master back to remote origin master on github
+git branch -d u/your_name             # Delete local version of u/your_name
+git push origin --delete u/your_name  # Delete remote version of u/your_name on github
+git branch -a                         # Verify that the local and remote versions of u/your_name have been deleted
+
+-----------------------------------------------------------
+Other useful git commands:
+
+git --version
+# Two commands below might be necessary to execute the command "git push origin u/your_name" (you would have seen an error message) 
+git config --global user.email "your_name@yourinstitution.com"  # create/update your e-mail address in the local git configuration
+git config --global user.name "your_name"   # create/update your username in the local git configuration
+git config --list
+git config --help
+git help config
+git log
+git diff
+
+General git tutorial stuff:
+  https://www.youtube.com/watch?v=HVsySz-h9r4 
+  https://medium.com/@christo8989/what-college-students-should-learn-about-git-6bbf6eaac39c
+  https://github.com/drphilmarshall/GettingStarted
+
+-----------------------------------------------------------
