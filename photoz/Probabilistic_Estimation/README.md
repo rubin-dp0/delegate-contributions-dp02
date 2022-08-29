@@ -6,7 +6,7 @@ This directory is for code and notebooks written in relation to the Kickstarte p
 2. Variational Autoencoder with a Mixture Density Network
 3. Semi-Supervised Regression Variational Autoencoder with a Mixture Density Network Regressor
 
-The first two models are composite models, with each component trained separately, while the third model trains classificatin and regression at the same time.
+The first two models are composite models, with each component trained separately, while the third model trains classification and regression at the same time.
 
 | File / Sub-Directory | Description | Author |
 |---|---|---|
