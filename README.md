@@ -7,6 +7,11 @@ Please contribute only code that you have verified to run.
 
 ## How to contribute to this repository.
 
+### Permissions
+
+You must be a DP0 Delegate (a member of the Delegates team of this GitHub Org), or a special case (a member of the Friends team) in order to contribute.
+Please contact Melissa Graham about this.
+
 ### Workflow
 
 1. Make a branch for your work, and name it u/(your github username).
