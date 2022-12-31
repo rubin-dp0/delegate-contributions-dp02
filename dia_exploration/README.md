@@ -9,4 +9,6 @@ All are welcome to contribute notebooks to this directory.
 | Title | Description | Author |
 |---|---|---|
 | dia_supernova | Plot lightcurves of Supernovae detected on difference images, along with cutouts of template, calexp and diffexp images. Provide hints on how to produce difference images with user defined templates. | Vincenzo Petrecca |
-| dia_match_truth | Generate a catalog of SNe Ia detected on the DP0.2 difference images, match it with a catalog of DP0.2 TruthSummary SNe Ia using the astropy function match_coordinates_sky`, and analyze the results. | Douglas Tucker |
+| dia_match_truth | Generate a catalog of SNe Ia detected on the DP0.2 difference images, match it with a catalog of DP0.2 TruthSummary SNe Ia using the astropy function match_coordinates_sky, and analyze the results. | Douglas Tucker |
+| dia_template_contamination | Demonstrates a way to evaluate and correct for template contamination (transient flux in the template images which leads to over-subtracted fluxes in the difference image). | Melissa Graham |
+| dia_SNIa_host_association | Demonstrates and evaulates the efficacy of several methods for associating SNIa with their host galaxies, using galaxy shape parameters in the Object catalog.  | Melissa Graham |
