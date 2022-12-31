@@ -8,6 +8,6 @@ This is a folder for notebooks that use the additional DESC truth tables provide
 
 DESC DC2 Data Release Note: https://arxiv.org/pdf/2101.04855.pdf
 
-| Filename    | Description |
-| ----------- | ----------- |
-| read_truth_parquet_files | How to efficiently and safely read the DESC's truth parquet files. |
+| Filename    | Description | Owner |
+| ----------- | ----------- | ----- |
+| read_truth_parquet_files | How to efficiently and safely read the DESC's truth parquet files. | Melissa Graham |
