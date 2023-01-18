@@ -10,6 +10,7 @@ Please ensure your sub-directory also has a README.md file explaining the sub-di
 | Sub-Directory | Description | Author |
 |---|---|---|
 | CMNN_Estimator | Generate PZ estimates for DP0 galaxies using a lightweight version of the [CMNN Estimator](https://github.com/dirac-institute/CMNN_Photoz_Estimator). | Melissa Graham |
+| Training_Set_Creation | Codes for creating and evaluating training sets (i.e., mock spec-z galaxy catalogs from DP0.2). | Melissa Graham |
 
 
 # note
