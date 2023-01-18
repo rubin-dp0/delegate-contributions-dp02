@@ -1,4 +1,4 @@
-# CMNN Estimator
+# Training Set Creation
 
 This directory is for code and notebooks that create mock training sets for photo-z estimation from the galaxies in the DP0.2 Object catalog.
 
