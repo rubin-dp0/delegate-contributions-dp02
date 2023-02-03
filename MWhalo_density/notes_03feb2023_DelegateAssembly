@@ -1,0 +1,16 @@
+Notes from chat after delegate assembly presentation:
+
+**Please feel free to update the MW halo notebook, or to adapt it for other purposes, then contribute to this repo!
+
+Future explorations:
+
+- Add errors to data points in density profile
+- Use a more robust/proper polynomial fitting technique (see, e.g., https://arxiv.org/abs/0706.1062)
+- Try with RR Lyrae
+- MSTO stars a la Juric+ papers
+- Other tracers?
+- Compare Trilegal to galfast models
+- Fold in things like contamination, biases due to abs mag relation uncertainties, etc.
+- Transform the abs mag - color relation from SDSS system to LSST (using Jen's transformations?)
+
+- Year 1 proper motions? (is anyone working on using DES/DELVE as 1st epoch for pxs and pms?)
