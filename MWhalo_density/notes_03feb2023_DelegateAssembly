@@ -11,6 +11,6 @@ Future explorations:
 - Other tracers?
 - Compare Trilegal to galfast models
 - Fold in things like contamination, biases due to abs mag relation uncertainties, etc.
-- Transform the abs mag - color relation from SDSS system to LSST (using Jen's transformations?)
+- Transform the abs mag - color relation from SDSS system to LSST (using Doug's and Jen's transformations?)
 
 - Year 1 proper motions? (is anyone working on using DES/DELVE as 1st epoch for pxs and pms?)
