@@ -9,8 +9,8 @@ Please contribute only code that you have verified to run.
 
 ### Permissions
 
-You must be a DP0 Delegate (a member of the Delegates team of this GitHub Org), or a special case (a member of the Friends team) in order to contribute.
-Please contact Melissa Graham about this.
+All are welcome to become a member of the Delegates or Friends teams of this GitHub Org in order to contribute.
+Please contact Melissa Graham to be added to a team.
 
 ### Workflow
 
