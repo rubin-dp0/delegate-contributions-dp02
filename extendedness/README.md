@@ -1,4 +1,4 @@
-# backgrounds
+# Star/galaxy separation and the extendedness parameter
 
 This folder is for DP0.2 notebooks related to star/galaxy separation and the extendedness parameter.
 
