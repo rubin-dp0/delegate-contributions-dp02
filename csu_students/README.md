@@ -2,7 +2,7 @@ Description:
 
 1. We extract Galaxies from the object catalogues using the TAP  
 
-2. We explore creating colo-magnitude diagrams for galaxies, with Matplotlib and Bokeh in order understand different functionalities 
+2. We explore creating color-magnitude diagrams for galaxies, with Matplotlib and Bokeh in order understand different functionalities 
 
 2. We fit a line to the galaxy main sequence 
 
