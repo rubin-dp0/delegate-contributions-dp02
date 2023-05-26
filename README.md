@@ -54,6 +54,8 @@ All tutorials should have a header containing:
  - the date the tutorial was last tested
  - the goals of the notebook
 
+Do not use the Rubin logo in the header unless you are Rubin staff preparing a tutorial under the guidelines of RTN-045.
+
 See the example directory for guidance on formatting notebooks and markdown files.
 
 ## Need to learn how to use GitHub?
