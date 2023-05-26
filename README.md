@@ -55,6 +55,7 @@ All tutorials should have a header containing:
  - the goals of the notebook
 
 Do not use the Rubin logo in the header unless you are Rubin staff preparing a tutorial under the guidelines of RTN-045.
+Consider rebranding your notebook with your own institute's logo or a personal logo or picture.
 
 See the example directory for guidance on formatting notebooks and markdown files.
 
