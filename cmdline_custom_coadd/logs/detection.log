@@ -1,0 +1,20 @@
+Sun Aug 27 22:40:10 UTC 2023
+WARNING 2023-08-27T22:40:17.858+00:00 py.warnings ()(warnings.py:109) - /opt/lsst/software/stack/stack/miniconda3-py38_4.9.2-4.1.0/Linux64/pipe_tasks/g369a80f31c+b9be13ffc2/python/lsst/pipe/tasks/multiBand.py:261: UserWarning: MeasureMergedCoaddSourcesConnections.defaultTemplates is deprecated and no longer used. Use MeasureMergedCoaddSourcesConfig.inputCatalog.
+  warnings.warn("MeasureMergedCoaddSourcesConnections.defaultTemplates is deprecated and no longer used. "
+
+INFO 2023-08-27T22:40:19.311+00:00 lsst.ctrl.mpexec.cmdLineFwk ()(cmdLineFwk.py:581) - QuantumGraph contains 1 quanta for 1 tasks, graph ID: '1693176019.3105097-9862'
+INFO 2023-08-27T22:40:41.609+00:00 lsst.detection.scaleVariance (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(scaleVariance.py:130) - Renormalizing variance by 1.004598
+INFO 2023-08-27T22:40:41.648+00:00 lsst.detection.detection (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(detection.py:925) - Applying temporary wide background subtraction
+INFO 2023-08-27T22:40:44.813+00:00 lsst.detection.detection (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(detection.py:598) - Detected 27272 positive peaks in 13944 footprints to 2.5 sigma
+INFO 2023-08-27T22:40:49.944+00:00 lsst.detection.detection.skyObjects (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(skyObjects.py:125) - Added 1000 of 1000 requested sky sources (100%)
+INFO 2023-08-27T22:40:49.981+00:00 lsst.detection.detection.skyMeasurement (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(forcedMeasurement.py:342) - Performing forced measurement on 1000 sources
+INFO 2023-08-27T22:40:58.760+00:00 lsst.detection.detection (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(dynamicDetection.py:220) - Modifying configured detection threshold by factor 0.796640 to 3.983202
+INFO 2023-08-27T22:41:00.120+00:00 lsst.detection.detection (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(detection.py:598) - Detected 7764 positive peaks in 5704 footprints to 3.9832 sigma
+INFO 2023-08-27T22:41:01.602+00:00 lsst.detection.detection (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(detection.py:598) - Detected 11905 positive peaks in 6108 footprints to 3.9832 sigma
+INFO 2023-08-27T22:41:03.410+00:00 lsst.detection.detection.skyObjects (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(skyObjects.py:125) - Added 1000 of 1000 requested sky sources (100%)
+INFO 2023-08-27T22:41:03.440+00:00 lsst.detection.detection.skyMeasurement (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(forcedMeasurement.py:342) - Performing forced measurement on 1000 sources
+INFO 2023-08-27T22:41:12.092+00:00 lsst.detection.detection (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(dynamicDetection.py:280) - Tweaking background by -0.009388 to match sky photometry
+INFO 2023-08-27T22:41:17.652+00:00 lsst.ctrl.mpexec.singleQuantumExecutor (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(singleQuantumExecutor.py:232) - Execution of task 'detection' on quantum {band: 'i', skymap: 'DC2', tract: 4431, patch: 17} took 39.447 seconds
+INFO 2023-08-27T22:41:17.676+00:00 lsst.ctrl.mpexec.singleQuantumExecutor ()(singleQuantumExecutor.py:654) - Log records could not be stored in this butler because the datastore can not ingest files, empty record list is stored instead.
+INFO 2023-08-27T22:41:18.278+00:00 lsst.ctrl.mpexec.mpGraphExecutor ()(mpGraphExecutor.py:518) - Executed 1 quanta successfully, 0 failed and 0 remain out of total 1 quanta.
+Sun Aug 27 22:41:19 UTC 2023
