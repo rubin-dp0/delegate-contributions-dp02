@@ -76,6 +76,8 @@ Note that the above `pipetask run` command specifies the same output `-o` locati
 
 An example log file obtained by running the above `pipetask run` source detection command is provided in the `logs` subdirectory, named `logs/detection.log`.
 
+Running the above source detection command takes roughly a minute or slightly longer.
+
 ## Second command line optional exercise
 
 **Problem statement**: *Try modifying other configuration parameters for the ``makeWarp`` and/or ``assembleCoadd`` tasks via the ``pipetask`` ``-c`` argument syntax.*
