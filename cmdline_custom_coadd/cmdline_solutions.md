@@ -22,7 +22,7 @@ You also must have a JupyterHub terminal window open and have run `setup lsst_di
 
 **Solution**:
 
-Let's start out by looking at the pipeline definition for `step3`, which is the chunk of the overall pipeline from which we subselected the `makeWarp` and `assembleCoadd` tasks to run in the DP0.2 command line custom coadd tutorial. To do this, we run pipetask build using the relevant pipeline definition YAML file and additionally specifying `#step3` in the URI:
+Let's start out by looking at the pipeline definition for `step3`, which is the chunk of the overall pipeline from which you subselected the `makeWarp` and `assembleCoadd` tasks to run in the DP0.2 command line custom coadd tutorial. To do this, run pipetask build using the relevant pipeline definition YAML file and additionally specifying `#step3` in the URI:
 
 ```
 pipetask build -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step3 --show pipeline
@@ -49,7 +49,7 @@ Part of the output you will see as a result of this `pipetask build` command sho
     - mergeDetections
 ```
 
-Here you can see that there is a Task named `detection` which, just like `makeWarp` and `assembleCoadd`, is part of the `step3` pipeline chunk. So you can run source detection exactly as we did for `makewarp` and `assembleCoadd`, but now specifying `#detection` rather than `#makeWarp,assembleCoadd` in the pipeline URI. You also want to make sure to use your custom coadd for the source detection. This is accomplished by specifying the `-i` input to be the location you previously specified as the custom coadd output location in the command line custom coadd tutorial. Putting this together, we arrive at the following command:
+Here you can see that there is a Task named `detection` which, just like `makeWarp` and `assembleCoadd`, is part of the `step3` pipeline chunk. So you can run source detection exactly as you did for `makewarp` and `assembleCoadd`, but now specifying `#detection` rather than `#makeWarp,assembleCoadd` in the pipeline URI. You also want to make sure to use your custom coadd for the source detection. This is accomplished by specifying the `-i` input to be the location you previously specified as the custom coadd output location in the command line custom coadd tutorial. Putting this together, one arrives at the following command:
 
 ```
 LOGFILE=$LOGDIR/detection.log; \
@@ -140,7 +140,7 @@ pipetask qgraph \
 -d "tract = 4431 AND patch = 17 AND visit in (919515,924057,924085,924086,929477,930353) AND skymap = 'DC2'"
 ```
 
-This will result in the following much-abbreviated printout, which states that there are 7 quanta in the QuantumGraph, consistent with what we saw in the more verbose output:
+This will result in the following much-abbreviated printout, which states that there are 7 quanta in the QuantumGraph, consistent with what you saw in the more verbose output:
 
 ```
 lsst.ctrl.mpexec.cmdLineFwk INFO: QuantumGraph contains 7 quanta for 2 tasks, graph ID: '1693040624.3335783-1840'
