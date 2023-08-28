@@ -22,6 +22,33 @@ You also must have a JupyterHub terminal window open and have run `setup lsst_di
 
 **Solution**:
 
+Let's start out by looking at the pipeline definition for `step3`, which is the chunk of the overall pipeline from which we subselected the `makeWarp` and `assembleCoadd` tasks to run in the DP0.2 command line custom coadd tutorial. To do this, we run pipetask build using the relevant pipeline definition YAML file and additionally specifying `#step3` in the URI:
+
+```
+pipetask build -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step3 --show pipeline
+```
+
+Part of the output you will see as a result of this `pipetask build` command shows the list of `step3` Tasks:
+
+```
+  step3:
+    subset:
+    - forcedPhotCoadd
+    - makeWarp
+    - writeObjectTable
+    - healSparsePropertyMaps
+    - mergeMeasurements
+    - selectGoodSeeingVisits
+    - transformObjectTable
+    - detection
+    - consolidateObjectTable
+    - deblend
+    - templateGen
+    - measure
+    - assembleCoadd
+    - mergeDetections
+```
+
 ## Second command line optional exercise
 
 **Problem statement**: *Try modifying other configuration parameters for the ``makeWarp`` and/or ``assembleCoadd`` tasks via the ``pipetask`` ``-c`` argument syntax.*
