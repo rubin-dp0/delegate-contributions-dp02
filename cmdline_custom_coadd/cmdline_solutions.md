@@ -74,7 +74,7 @@ export LOGDIR=logs
 
 Note that the above `pipetask run` command specifies the same output `-o` location as you used in the command line custom coadd tutorial. You could specify a different output location for the source detection outputs, if desired.
 
-An example log file obtained by running the above `pipetask run` source detection command is provided in the `logs` subdirectory, named `logs/detection.log`.
+An example log file obtained by running the above `pipetask run` source detection command is provided here in the `logs` subdirectory, named `logs/detection.log`.
 
 Running the above source detection command takes roughly a minute or slightly longer.
 
@@ -122,7 +122,7 @@ export LOGDIR=logs
 
 In the newly added `pipetask run` line starting with `-C`, the name of the separate config file is prefaced with `makeWarp:` because the parameters specified in `makeWarp_config.py` pertain to the `makeWarp` Task (as opposed to e.g., the `assembleCoadd` Task).
 
-An example log file obtained by running the above `pipetask run` command with `-C` is provided in the `logs` subdirectory, named `logs/makeWarpAssembleCoadd-configfile-logfile.log`.
+An example log file obtained by running the above `pipetask run` command with `-C` is provided here in the `logs` subdirectory, named `logs/makeWarpAssembleCoadd-configfile-logfile.log`.
 
 The `pipetask run` command from this optional exercise solution takes ~30-35 minutes to run.
 
