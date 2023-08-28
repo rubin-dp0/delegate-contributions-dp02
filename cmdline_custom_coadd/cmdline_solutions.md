@@ -193,7 +193,7 @@ export LOGDIR=logs
 
 An example log file obtained by running the above `pipetask run` command is provided here in the `logs` subdirectory, named `logs/makeWarpAssembleCoadd-morph-logfile.log`.
 
-The `pipetask run` command that generates custom coadds with the additional configuration parameter change for `doFilterMorphological` takes 30-35 minutes to run.
+The `pipetask run` command that generates custom coadds with the additional configuration parameter change for `doFilterMorphological` takes ~30-35 minutes to run.
 
 ## Third command line optional exercise
 
