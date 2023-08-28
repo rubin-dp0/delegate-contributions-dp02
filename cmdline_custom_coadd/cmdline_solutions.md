@@ -86,7 +86,7 @@ Running the above source detection command takes roughly a minute or slightly lo
 
 ## Third command line optional exercise
 
-**Problem statement**: *Try using the same two configuration parameter modifications as did this tutorial, but implementing them via a separate configuration (``.py``) file, rather than via the ``pipetask`` ``-c`` argument (hint: to do this, you'd use the ``-C`` argument for ``pipetask``).*
+**Problem statement**: *Try using the same two configuration parameter modifications as did this command line custom coadd tutorial, but implementing them via a separate configuration (``.py``) file, rather than via the ``pipetask`` ``-c`` argument (hint: to do this, you'd use the ``-C`` argument for ``pipetask``).*
 
 **Solution**:
 
