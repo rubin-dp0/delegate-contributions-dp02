@@ -14,7 +14,7 @@ These command line solutions, like the corresponding command line tutorial itsel
 
 Note also that the very first optional exercise from the DP0.2 command line custom coadd tutorial is a Jupyter notebook optional exercise rather than a command line optional exercise, and therefore no solution for that optional exercise is provided here.
 
-You also must have a JupyterHub terminal window open and have run `setup lsst_distrib` to set up the LSST pipelines within your environment. Again, refer to [the relevant DP0.2 command line tutorial](https://dp0-2.lsst.io/tutorials-examples/cmdline-custom-coadd.html) for further setup details.
+You also must have a Rubin Science Platform (RSP) JupyterHub terminal window open and have run `setup lsst_distrib` to set up the LSST pipelines within your environment. Again, refer to [the relevant DP0.2 command line tutorial](https://dp0-2.lsst.io/tutorials-examples/cmdline-custom-coadd.html) for further setup details.
 
 ## First command line optional exercise
 
