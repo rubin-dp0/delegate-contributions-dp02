@@ -138,6 +138,8 @@ Matching "doFilterMorphological" without regard to case (append :NOIGNORECASE to
 ### Configuration for task `assembleCoadd'
 # Filter artifact candidates based on morphological criteria, i.g. those that appear to be streaks.
 config.doFilterMorphological=False
+
+No quantum graph generated or pipeline executed. The --show option was given and all options were processed.
 ```
 
 Which indeed shows only the configuration for `doFilterMorphological`, and also reaffirms that the default value of this parameter is `False`.
