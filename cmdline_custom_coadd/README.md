@@ -1,4 +1,4 @@
-# this folder is for materials related to solutions to command line optional exercises from tutorial 9a
+# this folder is for materials related to solutions to command line optional exercises from DP0.2 tutorial 9a -- custom coadd
 
 The command line version of the DP0.2 custom coadd tutorial (9a) is available at:
 
