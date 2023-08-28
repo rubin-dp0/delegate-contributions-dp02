@@ -63,7 +63,16 @@ pipetask --long-log --log-file $LOGFILE run --register-dataset-types \
 date | tee -a $LOGFILE
 ```
 
-Note that this command specifies the same output `-o` location as you used in the command line custom coadd tutorial. You could specify a different output location for the source detection outputs, if desired.
+If you have not made a directory for log files and defined the associated `LOGFILE` environment variable, then you'll need to do that before running the above command. For instance, you could do:
+
+```
+mkdir logs
+export LOGDIR=logs
+```
+
+Note that the above `pipetask run` command specifies the same output `-o` location as you used in the command line custom coadd tutorial. You could specify a different output location for the source detection outputs, if desired.
+
+An example log file obtained by running the above `pipetask run` source detection command is provided in the `logs` subdirectory, named `logs/detection.log`.
 
 ## Second command line optional exercise
 
