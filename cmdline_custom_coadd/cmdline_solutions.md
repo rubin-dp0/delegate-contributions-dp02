@@ -121,7 +121,51 @@ No quantum graph generated or pipeline executed. The --show option was given and
 
 ```
 
-For the sake of this optional exercise, let's somewhat arbitrarily choose to switch the `doFilterMorphological` parameter, which has to do with filtering artifacts like satellite streaks based on morphology, to `True` (the opposite of its default value).
+For the sake of this optional exercise, let's somewhat arbitrarily choose to switch the `doFilterMorphological` parameter, which has to do with filtering artifacts like satellite streaks based on morphology, to `True` (the opposite of its default value). The DP0.2 simulated images do not have satellite streaks injected, but presumably such streaks will appear in real Rubin/LSST data.
+
+Let's narrow things down by showing only the configuration for the `doFilterMorphological` parameter that will be changed:
+
+```
+pipetask run \
+-b dp02 \
+-p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
+--show config=assembleCoadd::doFilterMorphological
+```
+
+The above command results in the following output:
+
+```
+Matching "doFilterMorphological" without regard to case (append :NOIGNORECASE to prevent this)
+### Configuration for task `assembleCoadd'
+# Filter artifact candidates based on morphological criteria, i.g. those that appear to be streaks.
+config.doFilterMorphological=False
+```
+
+Which indeed shows only the configuration for `doFilterMorphological`, and also reaffirms that the default value of this parameter is `False`.
+
+Now let's check that we can use the `-c` syntax of `pipetask run` to switch `doFilterMorphological` from its default value to `True` using the following command:
+
+```
+pipetask run \
+-b dp02 \
+-c assembleCoadd:doFilterMorphological=True \
+-p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
+--show config=assembleCoadd::doFilterMorphological
+```
+
+Note the addition of the `-c assembleCoadd:doFilterMorphological=True` option here. The `doFilterMorphological=True` assignment is prefaced with `assembleCoadd:` because `doFilterMorphological` is a parameter of the `assembleCoadd` Task.
+
+```
+Matching "doFilterMorphological" without regard to case (append :NOIGNORECASE to prevent this)
+### Configuration for task `assembleCoadd'
+# Filter artifact candidates based on morphological criteria, i.g. those that appear to be streaks.
+config.doFilterMorphological=True
+
+No quantum graph generated or pipeline executed. The --show option was given and all options were processed.
+```
+
+
+No quantum graph generated or pipeline executed. The --show option was given and all options were processed.
 
 ## Third command line optional exercise
 
