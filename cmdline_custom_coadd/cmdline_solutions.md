@@ -97,7 +97,7 @@ config.doApplyFinalizedPsf=False
 config.connections.visitSummary="visitSummary"
 ```
 
-Note that this is a Python file (`.py` extension), hence Python syntax is being used for e.g., boolean and string variables. The `makeWarp_config.py` is arbitrary -- this file could have been given some different name. Then in the `pipetask run` command that generates your custom coadd, simply delete the two lines that begin with `-c` and then add in a new line that begins with `-C` and specifies the relevant Task and Python config file:
+Note that this is a Python file (`.py` extension), hence Python syntax is being used for e.g., boolean and string variables. The `makeWarp_config.py` file name is arbitrary -- this file could have been given some different name. Then in the `pipetask run` command that generates your custom coadd, simply delete the two lines that begin with `-c` and then add in a new line that begins with `-C` and specifies the relevant Task and Python config file:
 
 ```
 LOGFILE=$LOGDIR/makeWarpAssembleCoadd-configfile-logfile.log; \
