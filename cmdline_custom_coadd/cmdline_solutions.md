@@ -80,7 +80,7 @@ Running the above source detection command takes roughly a minute or slightly lo
 
 ## Second command line optional exercise
 
-**Problem statement**: *Try modifying another configuration parameter for the ``makeWarp`` and/or ``assembleCoadd`` tasks via the ``pipetask`` ``-c`` argument syntax.*
+**Problem statement**: *Try modifying another configuration parameter for either the ``makeWarp`` or ``assembleCoadd`` Task via the ``pipetask`` ``-c`` argument syntax.*
 
 **Solution**:
 
