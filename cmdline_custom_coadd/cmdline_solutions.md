@@ -38,3 +38,20 @@ Note also that the very first optional exercise from the DP0.2 command line cust
 
 **Solution**:
 
+Execute the following command:
+
+```
+pipetask qgraph \
+-b dp02 \
+-i 2.2i/runs/DP0.2 \
+-p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
+-c makeWarp:doApplyFinalizedPsf=False \
+-c makeWarp:connections.visitSummary="visitSummary" \
+-d "tract = 4431 AND patch = 17 AND visit in (919515,924057,924085,924086,929477,930353) AND skymap = 'DC2'"
+```
+
+This will result in the following much-abbreviated printout, which states that there are 7 quanta in the QuantumGraph, consistent with what we saw in the more verbose output:
+
+```
+lsst.ctrl.mpexec.cmdLineFwk INFO: QuantumGraph contains 7 quanta for 2 tasks, graph ID: '1693040624.3335783-1840'
+```
