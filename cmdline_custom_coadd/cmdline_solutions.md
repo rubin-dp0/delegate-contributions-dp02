@@ -22,7 +22,7 @@ You also must have a Rubin Science Platform (RSP) JupyterHub terminal window ope
 
 **Solution**:
 
-Let's start out by looking at the pipeline definition for `step3`, which is the chunk of the overall pipeline from which you subselected the `makeWarp` and `assembleCoadd` tasks to run in the DP0.2 command line custom coadd tutorial. To do this, run `pipetask build` using the relevant pipeline definition YAML file (same one used throughout the command line custom coadd tutorial) and additionally specifying `#step3` in the URI:
+Let's start out by looking at the pipeline definition for `step3`, which is the chunk of the overall pipeline from which you subselected the `makeWarp` and `assembleCoadd` tasks to run in the DP0.2 command line custom coadd tutorial. To do this, run `pipetask build` using the relevant pipeline definition YAML file (the same one used throughout the command line custom coadd tutorial) and additionally specifying `#step3` in the URI:
 
 ```
 pipetask build -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step3 --show pipeline
