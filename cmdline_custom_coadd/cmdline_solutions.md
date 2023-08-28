@@ -18,7 +18,7 @@ You also must have a Rubin Science Platform (RSP) JupyterHub terminal window ope
 
 ## First command line optional exercise
 
-**Problem statement**: *Try applying further downstream processing to your custom coadd from the command line e.g., source detection run on the custom ``deepCoadd`` products.*
+**Problem statement**: *Try applying further downstream processing to your custom coadd from the command line e.g., source detection run on the custom coadd products.*
 
 **Solution**:
 
