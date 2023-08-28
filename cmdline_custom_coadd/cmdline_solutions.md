@@ -22,7 +22,7 @@ You also must have a JupyterHub terminal window open and have run `setup lsst_di
 
 **Solution**:
 
-Let's start out by looking at the pipeline definition for `step3`, which is the chunk of the overall pipeline from which you subselected the `makeWarp` and `assembleCoadd` tasks to run in the DP0.2 command line custom coadd tutorial. To do this, run pipetask build using the relevant pipeline definition YAML file and additionally specifying `#step3` in the URI:
+Let's start out by looking at the pipeline definition for `step3`, which is the chunk of the overall pipeline from which you subselected the `makeWarp` and `assembleCoadd` tasks to run in the DP0.2 command line custom coadd tutorial. To do this, run `pipetask build` using the relevant pipeline definition YAML file and additionally specifying `#step3` in the URI:
 
 ```
 pipetask build -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#step3 --show pipeline
@@ -48,6 +48,8 @@ Part of the output you will see as a result of this `pipetask build` command sho
     - assembleCoadd
     - mergeDetections
 ```
+
+Note that the order in which these `step3` tasks are printed out may vary from one `pipetask build` call to the next, so do not worry if you see them listed in a different order.
 
 Here you can see that there is a Task named `detection` which, just like `makeWarp` and `assembleCoadd`, is part of the `step3` pipeline chunk. So you can run source detection exactly as you did for `makewarp` and `assembleCoadd`, but now specifying `#detection` rather than `#makeWarp,assembleCoadd` in the pipeline URI. You also want to make sure to use your custom coadd for the source detection. This is accomplished by specifying the `-i` input to be the location you previously specified as the custom coadd output location in the command line custom coadd tutorial. Putting this together, one arrives at the following command:
 
