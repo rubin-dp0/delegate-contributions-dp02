@@ -49,6 +49,22 @@ Part of the output you will see as a result of this `pipetask build` command sho
     - mergeDetections
 ```
 
+Here you can see that there is a Task named `detection` which, just like `makeWarp` and `assembleCoadd`, is part of the `step3` pipeline chunk. So you can run source detection exactly as we did for `makewarp` and `assembleCoadd`, but now specifying `#detection` rather than `#makeWarp,assembleCoadd` in the pipeline URI. You also want to make sure to use your custom coadd for the source detection. This is accomplished by specifying the `-i` input to be the location you previously specified as the custom coadd output location in the command line custom coadd tutorial. Putting this together, we arrive at the following command:
+
+```
+LOGFILE=$LOGDIR/detection.log; \
+date | tee $LOGFILE; \
+pipetask --long-log --log-file $LOGFILE run --register-dataset-types \
+-b dp02 \
+-i u/$USER/custom_coadd_window1_cl00 \
+-o u/$USER/custom_coadd_window1_cl00 \
+-p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#detection \
+-d "tract = 4431 AND patch = 17 AND visit in (919515,924057,924085,924086,929477,930353) AND skymap = 'DC2'"; \
+date | tee -a $LOGFILE
+```
+
+Note that this command specifies the same output `-o` location as you used in the command line custom coadd tutorial. You could specify a different output location for the source detection outputs, if desired.
+
 ## Second command line optional exercise
 
 **Problem statement**: *Try modifying other configuration parameters for the ``makeWarp`` and/or ``assembleCoadd`` tasks via the ``pipetask`` ``-c`` argument syntax.*
