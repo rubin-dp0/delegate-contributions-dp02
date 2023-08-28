@@ -18,7 +18,7 @@ You also must have a JupyterHub terminal window open and have run `setup lsst_di
 
 ## First command line optional exercise
 
-**Problem statement**: *Try applying further downstream processing steps to your custom coadd from the command line e.g., source detection run on the custom ``deepCoadd`` products.*
+**Problem statement**: *Try applying further downstream processing to your custom coadd from the command line e.g., source detection run on the custom ``deepCoadd`` products.*
 
 **Solution**:
 
