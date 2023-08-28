@@ -68,6 +68,8 @@ In the newly added line starting with `-C`, the name of the separate config file
 
 An example log file obtained by running the above `pipetask run` command with `-C` is provided in the `logs` subdirectory, named `logs/makeWarpAssembleCoadd-configfile-logfile.log`.
 
+The `pipetask run` command from this optional exercise solution takes ~30-35 minutes to run.
+
 ## Fourth command line optional exercise
 
 **Problem statement**: *Run the ``pipetask qgraph`` command from section 3.1, but with the final line ``--show graph`` removed. This still takes roughly 15 minutes, but prints out a much more concise summary listing only the total number of quanta to be executed, which should be 7.*
@@ -91,3 +93,5 @@ This will result in the following much-abbreviated printout, which states that t
 ```
 lsst.ctrl.mpexec.cmdLineFwk INFO: QuantumGraph contains 7 quanta for 2 tasks, graph ID: '1693040624.3335783-1840'
 ```
+
+The `pipetask qgraph` command from this optional exercise solution takes ~15 minutes to run.
