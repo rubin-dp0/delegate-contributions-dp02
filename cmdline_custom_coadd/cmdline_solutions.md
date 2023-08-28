@@ -142,7 +142,7 @@ config.doFilterMorphological=False
 
 Which indeed shows only the configuration for `doFilterMorphological`, and also reaffirms that the default value of this parameter is `False`.
 
-Now let's check that we can use the `-c` syntax of `pipetask run` to switch `doFilterMorphological` from its default value to `True` using the following command:
+Now let's check that you can use the `-c` syntax of `pipetask run` to switch `doFilterMorphological` from its default value to `True` using the following command:
 
 ```
 pipetask run \
