@@ -80,9 +80,48 @@ Running the above source detection command takes roughly a minute or slightly lo
 
 ## Second command line optional exercise
 
-**Problem statement**: *Try modifying other configuration parameters for the ``makeWarp`` and/or ``assembleCoadd`` tasks via the ``pipetask`` ``-c`` argument syntax.*
+**Problem statement**: *Try modifying another configuration parameter for the ``makeWarp`` and/or ``assembleCoadd`` tasks via the ``pipetask`` ``-c`` argument syntax.*
 
 **Solution**:
+
+First it's necessary to figure out what some other relevant parameters are. To do that, execute a `pipetask run` command with the ``--show config`` option specified:
+
+```
+pipetask run \
+-b dp02 \
+-p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
+--show config
+```
+
+This `pipetask run` command again uses the same pipeline definition YAML file as did the DP0.2 command line custom coadd tutorial itself. The above command generates more than 1,000 lines of printouts total. Let's focus on the last few lines:
+
+```
+# Maximum variance scaling value to permit
+config.scaleWarpVariance.limit=10.0
+
+# Rescue artifacts from clipping that completely lie within a footprint detectedon the PsfMatched Template Coadd. Replicates a behavior of SafeClip.
+config.doPreserveContainedBySource=True
+
+# Ignore artifact candidates that are mostly covered by the bad pixel mask, because they will be excluded anyway. This prevents them from contributing to the outlier epoch count image and potentially being labeled as persistant.'Mostly' is defined by the config 'prefilterArtifactsRatio'.
+config.doPrefilterArtifacts=True
+
+# Prefilter artifact candidates that are mostly covered by these bad mask planes.
+config.prefilterArtifactsMaskPlanes=['NO_DATA', 'BAD', 'SAT', 'SUSPECT']
+
+# Prefilter artifact candidates with less than this fraction overlapping good pixels
+config.prefilterArtifactsRatio=0.05
+
+# Filter artifact candidates based on morphological criteria, i.g. those that appear to be streaks.
+config.doFilterMorphological=False
+
+# Grow streak footprints by this number multiplied by the PSF width
+config.growStreakFp=5.0
+
+No quantum graph generated or pipeline executed. The --show option was given and all options were processed.
+
+```
+
+For the sake of this optional exercise, let's somewhat arbitrarily choose to switch the `doFilterMorphological` parameter, which has to do with filtering artifacts like satellite streaks based on morphology, to `True` (the opposite of its default value).
 
 ## Third command line optional exercise
 
