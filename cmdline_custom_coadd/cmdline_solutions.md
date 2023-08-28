@@ -66,7 +66,7 @@ export LOGDIR=logs
 
 In the newly added line starting with `-C`, the name of the separate config file is prefaced with `makeWarp:` because the parameters specified in `makeWarp_config.py` pertain to the `makeWarp` Task (as opposed to e.g., the `assembleCoadd` Task).
 
-An example log file obtained by running this command is provided in the `logs` subdirectory, named `logs/makeWarpAssembleCoadd-configfile-logfile.log`.
+An example log file obtained by running the above `pipetask run` command with `-C` is provided in the `logs` subdirectory, named `logs/makeWarpAssembleCoadd-configfile-logfile.log`.
 
 ## Fourth command line optional exercise
 
