@@ -93,7 +93,7 @@ pipetask run \
 --show config
 ```
 
-This `pipetask run` command again uses the same pipeline definition YAML file as did the DP0.2 command line custom coadd tutorial itself. The above command generates more than 1,000 lines of printouts total. Let's focus on the last few lines:
+This `pipetask run` command again uses the same pipeline definition YAML file as did the DP0.2 command line custom coadd tutorial itself. The above command generates more than 1,000 lines of printouts in total. Let's focus on the last few lines:
 
 ```
 # Maximum variance scaling value to permit
@@ -118,7 +118,6 @@ config.doFilterMorphological=False
 config.growStreakFp=5.0
 
 No quantum graph generated or pipeline executed. The --show option was given and all options were processed.
-
 ```
 
 For the sake of this optional exercise, let's somewhat arbitrarily choose to switch the `doFilterMorphological` parameter, which has to do with filtering artifacts like satellite streaks based on morphology, to `True` (the opposite of its default value). The DP0.2 simulated images do not have satellite streaks injected, but presumably such streaks will appear in real Rubin/LSST data.
@@ -153,7 +152,7 @@ pipetask run \
 --show config=assembleCoadd::doFilterMorphological
 ```
 
-Note the addition of the `-c assembleCoadd:doFilterMorphological=True` option here. The `doFilterMorphological=True` assignment is prefaced with `assembleCoadd:` because `doFilterMorphological` is a parameter of the `assembleCoadd` Task.
+Note the addition of the `-c assembleCoadd:doFilterMorphological=True` option here. The `doFilterMorphological=True` assignment is prefaced with `assembleCoadd:` because `doFilterMorphological` is a parameter of the `assembleCoadd` Task. Running the above command yields the following printouts:
 
 ```
 Matching "doFilterMorphological" without regard to case (append :NOIGNORECASE to prevent this)
@@ -164,8 +163,35 @@ config.doFilterMorphological=True
 No quantum graph generated or pipeline executed. The --show option was given and all options were processed.
 ```
 
+As desired, the `doFilterMorphological` parameter has been successfully changed to a value of `True`. Now all that's left to do is plug this new `-c` option into the relevant `pipetask run` command that actually runs the custom coaddition, as follows:
 
-No quantum graph generated or pipeline executed. The --show option was given and all options were processed.
+```
+LOGFILE=$LOGDIR/makeWarpAssembleCoadd-morph-logfile.log; \
+date | tee $LOGFILE; \
+pipetask --long-log --log-file $LOGFILE run --register-dataset-types \
+-b dp02 \
+-i 2.2i/runs/DP0.2 \
+-o u/$USER/custom_coadd_window1_cl00 \
+-p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
+-c makeWarp:doApplyFinalizedPsf=False \
+-c makeWarp:connections.visitSummary="visitSummary" \
+-c assembleCoadd:doFilterMorphological=True \
+-d "tract = 4431 AND patch = 17 AND visit in (919515,924057,924085,924086,929477,930353) AND skymap = 'DC2'"; \
+date | tee -a $LOGFILE
+```
+
+Note that there are now *three* lines specifying configuration options via `-c`, whereas only two such lines were included in the command line custom coadd tutorial itself.
+
+If you have not made a directory for log files and defined the associated `LOGFILE` environment variable, then you'll need to do that before running the above command. For instance, you could do:
+
+```
+mkdir logs
+export LOGDIR=logs
+```
+
+An example log file obtained by running the above `pipetask run` is provided here in the `logs` subdirectory, named `logs/makeWarpAssembleCoadd-morph-logfile.log`.
+
+The `pipetask run` command that generates custom coadds with the additional configuration parameter change for `doFilterMorphological` takes 30-35 minutes to run.
 
 ## Third command line optional exercise
 
