@@ -10,6 +10,7 @@ The objective of this notebook series is to employ an automated program to analy
 
 The link below provides documentation for Dense Basis installation, dependencies and other features. Proceed with this notebook once the installation is completed:
 https://dense-basis.readthedocs.io/en/latest/
+It will also be necessary to download LSST_list.dat
 
 This notebook incorporates elements from tutorial notebooks 1-8 and is structured intachieve three main purpose:
 
