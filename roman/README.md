@@ -12,3 +12,4 @@ Ensure sub-directories also have a README.md file like this one.
 |---|---|---|
 | 1_match_DP0_Troxel.ipynb | Cross-match DP0 Objects to the Roman simulation of Troxel et al. (2023). | Melissa Graham |
 | 2_fit_star_SED_optIR.ipynb | Demonstrate fitting LSST star magnitudes as blackbodies, with and without the infrared Roman filters. | Melissa Graham |
+| 3_images_tutorial_DP0+Roman | Detect and visualize sources in Roman and Rubin simulated images over an overlapping region. | Chien-Hao Lin, Melissa Graham |
